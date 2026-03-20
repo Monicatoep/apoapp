@@ -31,10 +31,10 @@ export function IntervalCalculator() {
     target.setDate(target.getDate() + parsedNumber!)
     const diff = daysBetween(today, target)
     if (diff > 0) {
-      calcInfo = `${diff} dag${diff !== 1 ? 'e' : ''} tilbage`
+      calcInfo = `${diff} dag${diff !== 1 ? 'e' : ''} tilbage til interval overholdes`
       calcIsLeft = true
     } else if (diff < 0) {
-      calcInfo = `${Math.abs(diff)} dag${Math.abs(diff) !== 1 ? 'e' : ''} siden`
+      calcInfo = `${Math.abs(diff)} dag${Math.abs(diff) !== 1 ? 'e' : ''} siden interval blev overholdt`
     } else {
       calcInfo = 'Det er i dag'
     }
