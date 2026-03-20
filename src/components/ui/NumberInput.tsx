@@ -19,7 +19,7 @@ export function NumberInput({ id, label, value, onChange, info, infoClassName }:
         }}
         placeholder="0"
       />
-      {info && <p className={`mt-2 text-sm font-semibold ${infoClassName === 'info-warning' ? 'text-red-700' : ''}`} style={infoClassName !== 'info-warning' ? { color: 'var(--accent)' } : {}}>{info}</p>}
+      {info && <p className={`mt-2 text-sm font-semibold ${infoClassName === 'info-warning' ? 'text-rose-400' : ''}`} style={infoClassName !== 'info-warning' ? { color: 'var(--accent)' } : {}}>{info}</p>}
     </div>
   )
 }
