@@ -1,0 +1,57 @@
+/* Custom styles that need CSS variables — Tailwind handles the rest */
+.input-styled {
+  border: 1px solid var(--accent);
+  border-radius: 0 12px 0 12px;
+  background: var(--bg);
+  color: var(--accent);
+}
+
+.input-styled:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px rgba(7, 63, 59, 0.2);
+}
+
+.card-left {
+  background: var(--accent-light);
+  border-radius: 12px 0 12px 0;
+}
+
+.card-right {
+  background: var(--accent-light);
+  border-radius: 0 12px 0 12px;
+}
+
+.btn-styled {
+  border: 1px solid var(--accent);
+  border-radius: 0 12px 0 12px;
+  background: var(--bg);
+  color: var(--accent);
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn-styled.active {
+  background: var(--accent);
+  color: var(--accent-light);
+}
+
+.segmented-border {
+  border: 1px solid var(--accent);
+  border-radius: 0 12px 0 12px;
+}
+
+.seg-option {
+  background: var(--bg);
+  color: var(--accent);
+  border-right: 1px solid var(--accent);
+  transition: background 0.2s, color 0.2s;
+}
+
+.seg-option:last-child {
+  border-right: none;
+}
+
+.seg-option.active {
+  background: var(--accent);
+  color: var(--accent-light);
+}
