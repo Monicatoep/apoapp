@@ -17,14 +17,23 @@ function App() {
     setThemeCookie(isDark)
   }, [isDark])
 
+  const [resetKey, setResetKey] = useState(0)
+
   return (
-    <div className="relative max-w-[900px] mx-auto mt-2 md:mt-4 mb-4 px-4 md:px-8 font-sans">
+    <div className="relative max-w-[900px] mx-auto mt-1 md:mt-2 mb-2 px-4 md:px-8 font-sans">
       <ThemeToggle isDark={isDark} onToggle={() => setIsDark(!isDark)} />
-      <h1 className="text-3xl md:text-5xl text-center mb-6 md:mb-8 font-medium" style={{ color: 'var(--accent)' }}>Regnedimsen</h1>
-      <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-stretch">
-        <DaysSupplyCalculator />
-        <IntervalCalculator />
+      <h1 className="text-2xl md:text-4xl text-center mb-3 md:mb-4 font-medium" style={{ color: 'var(--accent)' }}>Regnedimsen</h1>
+      <div className="flex flex-col md:flex-row gap-4 md:gap-6 items-stretch">
+        <DaysSupplyCalculator key={`supply-${resetKey}`} />
+        <IntervalCalculator key={`interval-${resetKey}`} />
       </div>
+      <button
+        onClick={() => setResetKey(k => k + 1)}
+        className="block mx-auto mt-3 px-6 py-1.5 text-sm font-medium rounded-lg cursor-pointer transition-opacity hover:opacity-80"
+        style={{ color: 'var(--accent)', border: '1px solid var(--accent)' }}
+      >
+        Nulstil
+      </button>
       <Footer />
     </div>
   )

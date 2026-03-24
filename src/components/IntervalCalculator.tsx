@@ -41,8 +41,8 @@ export function IntervalCalculator() {
   }
 
   return (
-    <div className="card-right flex-1 p-6 md:p-8">
-      <h2 className="mb-6 text-xl font-medium" style={{ color: 'var(--text-h)' }}>Udleveringsintervalsberegner</h2>
+    <div className="card-right flex-1 p-4 md:p-6">
+      <h2 className="mb-3 text-lg font-medium" style={{ color: 'var(--text-h)' }}>Udleveringsintervalsberegner</h2>
       <DateInput id="date-input" label="Dato for udlevering" value={date} onChange={setDate} info={dateInfo} />
       <QuickNumberInput id="number-input" label="Udleveringsinterval (dage)" value={number} onChange={setNumber} presets={[30, 100]} placeholder="Andet antal" info={calcInfo} infoClassName={calcIsLeft ? 'info-warning' : ''} />
     </div>

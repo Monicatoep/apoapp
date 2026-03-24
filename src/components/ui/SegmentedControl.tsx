@@ -2,7 +2,7 @@ import type { SegmentedControlProps } from '../../interfaces/ui'
 
 export function SegmentedControl({ options, value, onChange }: SegmentedControlProps) {
   return (
-    <div className="segmented-border flex mb-6 overflow-hidden">
+    <div className="segmented-border flex mb-4 overflow-hidden">
       {options.map((option) => (
         <button
           key={option.value}

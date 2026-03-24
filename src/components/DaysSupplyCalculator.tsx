@@ -40,9 +40,9 @@ export function DaysSupplyCalculator() {
   }
 
   return (
-    <div className="card-left flex-1 p-6 md:p-8">
-      <h2 className="mb-6 text-xl font-medium" style={{ color: 'var(--text-h)' }}>Forbrugsberegner</h2>
-      <div className="flex items-end gap-3 mb-4">
+    <div className="card-left flex-1 p-4 md:p-6">
+      <h2 className="mb-3 text-lg font-medium" style={{ color: 'var(--text-h)' }}>Forbrugsberegner</h2>
+      <div className="flex items-end gap-3 mb-3">
         <div className="flex-1 [&>div]:mb-0">
           <NumberInput id="dose-input" label="Antal (tabl, ml etc.)" value={dose} onChange={setDose} />
         </div>

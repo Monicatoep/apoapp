@@ -2,7 +2,7 @@ import type { QuickNumberInputProps } from '../../interfaces/ui'
 
 export function QuickNumberInput({ id, label, value, onChange, presets, placeholder, info, infoClassName }: QuickNumberInputProps) {
   return (
-    <div className="mb-6">
+    <div className="mb-4">
       <label htmlFor={id} className="block mb-1.5 font-semibold text-sm">{label}</label>
       <div className="flex flex-wrap gap-2 mb-2">
         {presets.map((n) => (
@@ -21,7 +21,7 @@ export function QuickNumberInput({ id, label, value, onChange, presets, placehol
         type="number"
         min="0"
         step="1"
-        className="input-styled w-full py-2.5 px-3 text-base box-border"
+        className="input-styled w-full py-2 px-3 text-base box-border"
         value={value}
         onChange={(e) => {
           const val = e.target.value
